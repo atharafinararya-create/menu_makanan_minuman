@@ -3,32 +3,46 @@
 #include <iostream>
 using namespace std;
 int main() {
-    string makanan[2]={"pecel"};
-    int hargamakanan[2]={10000};
-    string minuman[2]={"teh","kopi"};
+    string makanan ="pecel";
+    int hargamakanan = 10000;
+    string minuman[2]={"Teh", "Kopi"};
     int hargaminuman[2]={3000,5000};
-    int porsi[2];
+    int porsi;
     int total;
     int i;
-    for(i=0;i<2;i++)
-        {
-            cout<<"SELAMAT DATANG DI WARUNG SUGIK\n\n";
-            cout<<"menu makanan : ";
-            cout<<makanan[i]<<endl;
-            cout<<"menu minuman : ";
+    char ulang;
+    do {
+        cout<<"================================"<<endl;
+        cout<<"   Selamat Di Warung Bu Sugik   "<<endl;
+        cout<<"================================"<<endl;
+        for (i=0;i<2;i++) {
+            cout<<"Menu Makanan : ";
+            cout<<makanan<<endl;
+            cout<<"Menu Minuman : ";
             cout<<minuman[i]<<endl;
-            cout<<"harga makanan : ";
-            cout<<hargamakanan[i]<<endl;
-            cout<<"harga minuman : ";
+            cout<<"----------------------------"<<endl;
+            cout<<"Harga Makanan : Rp.";
+            cout<<hargamakanan<<endl;
+            cout<<"Harga Minuman : Rp.";
             cout<<hargaminuman[i]<<endl;
-            cout<<"masukan porsi anda : ";
-            cin>>porsi[i];
-            total=(hargaminuman[i] + hargamakanan[i])*porsi[i];
-            cout<<"totalnya adalah : ";
+            cout<<"masukan porsi : ";
+            cin>>porsi;
+            total = (hargamakanan + hargaminuman[i]) * porsi;
+            cout<<"============================"<<endl;
+            cout<<"    total pesanan : Rp.";
             cout<<total<<endl;
-            cout<<"_______________________\n"<<endl;
+            cout<<"============================"<<endl;
+            cout<<"============================"<<endl;
+            
         }
-            while(ulang=="y"|| ulang =="a");
+        cout<<"apakah anda ingin pesan lagi (1,y) : ";
+        cin>>ulang;
+        cout<<endl;
+        
+    } while (ulang == '1' || ulang == 'y');
+    cout<<"\n\n================================="<<endl;
+    cout<<"      Terimakasih atas Kunjungan nya "<<endl;
+    cout<<"====================================="<<endl;
     system("pause");
     return 0;
 }
