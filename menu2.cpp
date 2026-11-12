@@ -28,5 +28,6 @@ int main() {
             cout<<total<<endl;
             cout<<"_______________________\n"<<endl;
         }
+    system("pause");
     return 0;
 }
