@@ -28,6 +28,7 @@ int main() {
             cout<<total<<endl;
             cout<<"_______________________\n"<<endl;
         }
+            while(ulang=="y"|| ulang =="a");
     system("pause");
     return 0;
 }
